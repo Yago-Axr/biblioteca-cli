@@ -18,15 +18,20 @@ while True:
 
     opcao = int(input("Escolha uma opção: "))
     if opcao == 1:
-        Id = int(input("Qual o ID do Livro: "))
-        titulo = input("Qual o título do Livro: ")
-        autor = input("Qual o autor do Livro: ")
-        ano = int(input("Qual o ano do Livro: "))
-
-        livro = {
-            "ID" : Id
-
+        id_livro = int(input("Informe o ID do livro: "))
+        titulo = input("Informe o Título do livro: ")
+        autor = input("Informe o nome do autor: ")
+        ano = int(input("Informe o ano do livro: "))
+        Cadastro = {
+            "id": id_livro,
+            "titulo": titulo,
+            "autor": autor,
+            "ano": ano,
+            "disponivel": True
         }
+        print("Livro cadastrado com sucesso!!")
+        Livros.append(Cadastro)
+        
     elif opcao == 7:
         print("Encerrando o programa")
         break
