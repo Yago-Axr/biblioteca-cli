@@ -50,8 +50,28 @@ while True:
                 else:
                     print("Não")
                 print("-" * 50)
-                
-        
+    elif opcao == 3:
+        buscador = int(input("Qual o ID do livro: "))
+        encontrado = False
+        for livro in Livros:
+            if buscador == livro['id']:
+                 encontrado = True
+                 print(f"ID: {livro['id']}")
+                 print(f"Título: {livro['titulo']}")
+                 print(f"Autor: {livro['autor']}")
+                 print(f"Ano: {livro['ano']}")
+                 print("Disponível: ", end="")
+                 if livro['disponivel']:
+                    print("Sim")
+                 else:
+                    print("Não")
+                 print("-" * 50)
+                 break
+        if not encontrado:
+            print("ID não encontrado")
+
+
+                     
     elif opcao == 7:
         print("Encerrando o programa")
         break
