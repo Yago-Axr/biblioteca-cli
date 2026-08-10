@@ -69,6 +69,20 @@ while True:
                  break
         if not encontrado:
             print("ID não encontrado")
+    elif opcao == 4:
+        pedir_id = int(input("Informe o ID do livro: "))
+        emprestado = False
+        for livro in Livros:
+            if pedir_id == livro['id']:
+                emprestado = True
+                print(f"ID: {livro['id']} encontrado")
+                if livro['disponivel']:
+                    print("Livro disponivel.")
+                else:
+                    print("Livro emprestado")
+                break
+        if not emprestado:
+            print("Não encontrado.")
 
 
                      
